@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小米账号-登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		<!--logo-wrap-->
+		<div class="logo-wrap">
+			<div class="logo_list">
+				<h1 class="float_left"><img src="images/tubiao/logo-footer.png"/></h1>
+				<div class="logo_right float_left">
+					<h2>小米商城</h2>
+					<p>让每个人都能享受科技的乐趣</p>
+				</div>
+			</div>
+		</div>
+		<!--bottem-wrap-->
+		<div class="bottem-wrap">
+			<div class="bottem_list">
+				<div class="bottem_top clear_fix">
+					<h2 class="float_left">帐号登录</h2>
+					<h2 class="float_left">扫码登录</h2>
+				</div>
+				<div class="bottem_form">
+					<input type="text" id="userId" value="" placeholder="手机号码" /><span id="userMsg"></span>
+					<input type="password" id="passId" value="" />
+					<input type="button" id="btnLogin" value="登录"/>	
+					<div id="msg"></div>
+				</div>
+				<div class="bottem_txt">
+					<h3 class="float_left">手机短信登录/注册</h3>
+					<h3 class="float_right"><a href="#">立即注册</a><span>|</span><a href="#">忘记密码？</a></h3>
+				</div>
+				<div class="bottem_footer">
+					<fieldset>
+						<legend>其他方式登录</legend>
+					</fieldset>
+					<h4 class="clear_fix">
+						<a href="#"><img src="images/6_03.jpg"/></a>
+						<a href="#"><img src="images/6_05.jpg"/></a>
+						<a href="#"><img src="images/6_07.jpg"/></a>
+						<a href="#"><img src="images/6_09.jpg"/></a>
+					</h4>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div id="footer">
+			<div class="footer-wrap">
+				<h2>
+					<a href="#"> 简体 </a>
+					<span>|</span>
+					<a href="#"> 繁体 </a>
+					<span>|</span>
+					<a href="#"> English </a>
+					<span>|</span>
+					<a href="#"> 常见问题 </a>
+					<span>|</span>
+					<a href="#"> 隐私政策 </a>
+				</h2>
+				<p>
+					<span>小米公司版权所有-京ICP备10046444-</span><a href="#"><img src="images/ghs.png"/></a><span>京公网安备11010802020134号-京ICP证110507号</span>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		 $("#btnLogin").click(function () {
+		        //一、前端验证
+		        if($("#userId").val()==""){
+		            alert("用户名不能为空");
+		            return;
+		        }
+		        if($("#passId").val()==""){
+		            alert("密码不能为空");
+		            return;
+		        }
+		        // 二、后端处理
+		        $.post("php/login.php", {
+		            "username": $("#userId").val(),
+		            "userpass": $("#passId").val()
+		        }, show);
+		    });
+		
+		    function show(data) {
+		        if (data == "success") {
+		        	addCookie("userName",$("#userId").val(),7);
+		            let count = 6; //倒数的秒数
+		            let myTimer = setInterval(() => {
+		                count--;
+		                if (count == 0) {
+		                    window.clearInterval(myTimer);
+		                    location.href = "index.html";
+		                    //    return; 
+		                }
+		                $("#msg").css({ "color": "green" }).html(`登录成功，${count}秒后，自动跳转到<a href='index.html'>首页</a>`);
+		            }, 1000);
+		        } else if (data = "fail") {
+		            $("#msg").css({ "color": "red" }).html("登录失败，用户名或者密码不正确");
+		        }
+		    }
+		    function addCookie(key,value,count){
+			    // 1、失效时间点
+			    let d = new Date();
+			    d.setDate(d.getDate()+count);
+			    document.cookie = `${key}=${escape(value)};expires=${d.toGMTString()}`;
+			}
+	</script>
+</html>

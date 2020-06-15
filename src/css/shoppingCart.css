@@ -1,0 +1,486 @@
+@charset "utf-8";
+/* 公共的样式 */
+
+/* 版心 width   margin:0 auto; */
+.header-wrap,.shoppingCart-wrap,.shoppingliebiao-wrap{
+    width:1226px;
+    margin:0 auto;
+}
+/*header*/
+header{
+	width: 100%;
+	border-bottom: 2px solid #ff6700;
+}
+.header-wrap{
+	height: 74px;
+	padding-top: 26px;
+}
+.header-wrap h1 a{
+	display: block;
+	width: 48px;
+	height: 48px;
+}
+.header-wrap h1 a img{
+	width: 100%;
+	height: 100%;
+}
+.header-wrap h2{
+	padding-top: 10px;
+	margin-left: 45px;
+}
+.header-wrap h2 span{
+	font-size: 28px;
+	line-height: 28px;
+	color: #424242;
+}
+.header-wrap h2 em{
+	font-size: 11px;
+	line-height: 11px;
+	color: #757575;
+	margin-left: 15px;
+}
+.header-wrap h3{
+	padding: 10px 5px 0 0;
+	
+}
+.header-wrap .nav_r{
+	position: relative;
+}
+.header-wrap .nav_r a{
+	font-size: 11px;
+	line-height: 11px;
+	color: #757575;
+}
+.header-wrap .nav_r span{
+	font-size: 11px;
+	color: #393e3e;
+	display: inline-block;
+	margin: 0 1px;
+}
+.header-wrap .nav_r .nav_a{
+	display: inline-block;
+	width: 110px;
+	text-align: center;
+}
+.header-wrap .nav_r .nav_a:hover{
+	color: #FF4A00;
+}
+.header-wrap .nav_r span{
+	color: #393e3e;
+	display: inline-block;
+	margin: 0 1px;
+}
+.nav_r .nav_xlk{
+	position: absolute;
+	width: 110px;
+	height: 154px;
+	top: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 1px #B0B0B0;
+	z-index: 10;
+	padding-top: 10px;
+	display: none;
+}
+.nav_r .nav_xlk ul li{
+	width: 110px;
+}
+.nav_r .nav_xlk ul li a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 11px;
+	color: #424242;
+	
+}
+.nav_r .nav_xlk ul li a:hover{
+	background: #E0E0E0;
+	color: #FF4A00;
+	
+}
+/*shoppingCart-wrap*/
+#shoppingCart{
+	background: #f5f5f5;
+	width: 100%;
+}
+.shoppingCart-wrap{
+	min-height: 283px;
+	padding-top: 42px;
+}
+.shoppingCart-wrap h2{
+	text-align: right;
+	font-size: 12px;
+	line-height: 12px;
+	margin-bottom: 17px;
+}
+.shoppingCart-wrap h2 span{
+	color: #727272;
+}
+.shoppingCart-wrap h2 em{
+	color: #ff6700;
+}
+.shoppingCart-wrap h2 a{
+	color: #262626;
+}
+.shoppingCart_table{
+	width: 1226px;
+	background: #FFFFFF;
+	border-bottom: 1px solid #E0E0E0;
+}
+.shopping_xhx1{
+	height: 70px;
+	width: 1226px;
+}
+
+.shopping_xhx1 td:nth-of-type(1) span{
+	display: block;
+	margin-left: 14px;
+	float: left;
+}
+.shopping_xhx1 td{
+	line-height: 70px;
+}
+
+.shopping_xhx1 td:nth-of-type(1) label,.shopping_xhx td:nth-of-type(1) label{
+	display: block;
+	width: 20px;
+    height: 20px;
+	line-height: 20px;
+    cursor: pointer;
+    position: absolute;
+	border:  1px solid #ccc;/*改变复选框的边框颜色也可以不要边框*/
+    top: 25px;
+    left: 24px;
+}
+.shopping_xhx td:nth-of-type(1) label{
+	top: 52px;
+}
+.shopping_xhx1 td:nth-of-type(1) input,.shopping_xhx td:nth-of-type(1) input{
+	visibility: hidden;
+}
+.shopping_xhx1 td:nth-of-type(1) input:checked+label:before,.shopping_xhx td:nth-of-type(1) input:checked+label:before{/*before为伪元素可以在元素之后添加内容*/
+    display: block;
+/*	css3中的content字符编码*/
+    content: "\2713";
+/*	复选框里面的&radic;居中*/
+    text-align: center;
+/*	复选框里面的&radic;大小*/
+    font-size: 20px;
+/*	字体的颜色*/
+    color: #FFFFFF;
+/*  复选框勾选后的背景颜色*/
+	background: #FF6700;
+}
+.shopping_xhx1 td:nth-of-type(1){
+	width: 87px;
+	position: relative;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(2){
+	width: 80px;
+	text-align: center;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(3){
+	width: 180px;
+	padding-left: 180px;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(4){
+	width: 165px;
+	text-align: center;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(5){
+	width: 170px;
+	text-align: center;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(6){
+	width: 150px;
+	text-align: center;
+	line-height: 70px;
+}
+.shopping_xhx1 td:nth-of-type(7){
+	width: 110px;
+	text-align: center;
+	line-height: 70px;
+}
+.shoppingCart_table tr td {
+	font-size: 12px;
+	line-height: 20px;
+	color: #424242;
+}
+.shopping_xhx{
+	height: 116px;
+	width: 1226px;
+}
+.shopping_xhx td:nth-of-type(1){
+	width: 78px;
+	position: relative;
+}
+.shopping_xhx td:nth-of-type(1) input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	margin-left: 24px;
+	display: block;
+	float: left;
+}
+.shopping_xhx1 td:nth-of-type(1) input[type="checkbox"]{
+	width: 20px;
+	height: 20px;
+	margin-left: 24px;
+	display: block;
+	float: left;
+}
+.shopping_xhx td:nth-of-type(2){
+	width: 70px;
+	font-size: 14px;
+	color: #424242;
+	text-align: center;
+}
+.shopping_xhx td:nth-of-type(3){
+	width: 340px;
+}
+.shopping_xhx td:nth-of-type(3) a:nth-of-type(1){
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin-left: 10px;
+	float: left;
+}
+.shopping_xhx td:nth-of-type(3) a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.shopping_xhx td:nth-of-type(3) a:nth-of-type(2){
+	font-size: 18px;
+	line-height: 18px;
+	padding-top: 31px;
+	color: #424242;
+	float: left;
+	margin-left: 40px;
+}
+.shopping_xhx td:nth-of-type(4){
+	width: 150px;
+	font-size: 14px;
+	color: #424242;
+	text-align: center;
+}
+.shopping_xhx td:nth-of-type(5){
+	width: 150px;
+	padding-left: 20px;
+}
+.shopping_xhx td:nth-of-type(6){
+	width: 140px;
+	font-size: 14px;
+	line-height: 14px;
+	color: #FF6700;
+	text-align: center;
+}
+.shopping_xhx td:nth-of-type(7){
+	width: 20px;
+	text-align: center;
+	padding:0 33px 0 40px;
+	font-size: 10px;
+	line-height: 25px;
+}
+.shopping_xhx td:nth-of-type(7) a{
+	display: block;
+	width: 25px;
+	height: 25px;
+	background:#FFFFFF;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.shopping_xhx td:nth-of-type(7):hover a{
+	background: palevioletred;
+}
+.shopping_xhx td input{
+	float: left;
+}
+.shopping_xhx td input[type="text"]{
+	width: 72px;
+	height: 38px;
+	border: 1px solid #E0E0E0;
+	text-align: center;
+	border-left: none;
+	border-right: none;
+}
+.shopping_xhx td input[type="button"]{
+	width: 37px;
+	height: 40px;
+	border: 1px solid #E0E0E0;
+	background: #FFFFFF;
+}
+.shopping_xhx td input[type="button"]:hover{
+	background: #E0E0E0;
+}
+.shopping_xhx td:nth-of-type(4) input:nth-of-type(1){
+	border-right: none;
+	font-size: 14px;
+	margin-left: 20px;
+}
+.shopping_xhx td:nth-of-type(4) input:nth-of-type(3){
+	border-left: none;
+	font-size: 14px;
+}
+.shopping_jiesuan{
+	width: 1226px;
+	height: 50px;
+	background: #FFFFFF;
+	margin: 20px 0 80px;
+}
+.shopping_jiesuan h3{
+	font-size: 12px;
+	line-height: 50px;
+	padding-left: 31px;
+}
+.shopping_jiesuan h3 a{
+	color: #757575;
+}
+.shopping_jiesuan h3 a:nth-of-type(1):hover{
+	color: #FF6700;
+}
+.shopping_jiesuan h3 a:nth-of-type(3) span{
+	color: #ff9600;
+}
+.shopping_jiesuan h4{
+	margin-left: 600px;
+}
+.shopping_jiesuan h4 span{
+	font-size: 12px;
+	line-height: 50px;
+	color: #ff6700;
+}
+.shopping_jiesuan h4 em{
+	font-size: 22px;
+	line-height: 22px;
+	color: #ff6700;
+}
+.shopping_jiesuan input{
+	width: 202px;
+	height: 50px;
+	background: #FF6700;
+	font-size: 18px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFFFFF;
+	border: none;
+}
+.shopping_kgwc{
+	padding: 60px 0 110px;
+	width: 740px;
+	height: 271px;
+	margin: 0 auto;
+}
+.shopping_kgwc .shopping_kc{
+	padding-right: 10px;
+}
+.shopping_kgwc .shopping_kc h2{
+	margin-top: 60px;
+	font-size: 34px;
+	line-height: 34px;
+	color: #b0b0b0;
+	font-weight: bolder;
+}
+.shopping_kgwc .shopping_kc h3{
+	font-size: 18px;
+	line-height: 18px;
+	color: #B0B0B0;
+	margin-top: 16px;
+}
+.shopping_kgwc .shopping_kc h4{
+	margin-top: 26px;
+}
+.shopping_kgwc .shopping_kc h4 a{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 50px;
+	text-align: center;
+}
+.shopping_kgwc .shopping_kc h4 a:nth-of-type(1){
+	width: 172px;
+	height: 50px;
+	background: #ff6700;
+	color: #FFFFFF;
+}
+.shopping_kgwc .shopping_kc h4 a:nth-of-type(2){
+	width: 170px;
+	height: 48px;
+	border: 1px solid #FF6700;
+	color: #FF6700;
+	margin-left: 13px;
+}
+/*买购物车中商品的人还买了*/
+.shangptj fieldset{
+	padding: 0 365px;
+	width: 500px;
+	margin: 0 auto;
+	border: 0;
+	border-top:1px solid #e0e0e0 ;
+}
+.shangptj fieldset legend{
+	font-size: 30px;
+	line-height: 30px;
+	color: #757575;
+	text-align: center;
+	padding:0 62px;
+}
+
+.shoppingliebiao-wrap{
+	display: grid;
+	margin-top: 36px;
+	padding-bottom: 66px;
+	min-height: 628px;
+	grid-template-columns:repeat(5,234px);
+	grid-template-rows:repeat(2,300px);
+	grid-row-gap:14px  ;/* 行间距 */
+	grid-column-gap:14px ;/* 列间距 */
+}
+.shoppingliebiao_tit{
+	background: #FFFFFF;
+}
+.shoppingliebiao_tit>a{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+.shoppingliebiao_tit>a img{
+	width: 100%;
+	height: 100%;
+}
+.shoppingliebiao_tit h3{
+	text-align: center;
+}
+.shoppingliebiao_tit h3 a{
+	font-size: 12px;
+	line-height: 12px;
+	color: #858585;
+}
+.shoppingliebiao_tit h6{
+	font-size: 12px;
+	line-height: 12px;
+	color: #757575;
+	margin-top: 19px;
+	text-align: center;
+}
+.shoppingliebiao_tit h5{
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+	color: #fa6509;
+	margin-top: 16px;
+}
+/*.shoppingliebiao_tit span{
+	width: 120px;
+	height: 28px;
+	display: block;
+	border: 1px solid #FF6700;
+	font-size: 11px;
+	line-height: 28px;
+	text-align: center;
+	margin: 0 auto;
+}*/
